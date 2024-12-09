@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ерхат</title>
+
+    <style>
+        /* Стиль для текста в блоке div */
+        #text-block {
+            border: 1px solid black;
+            margin-left: 2cm;
+            margin-right: 2cm;
+            margin-top: 1cm;
+            margin-bottom: 0cm;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 14pt;
+            background-color: lightgray;
+            text-indent: 1.5cm;
+        }
+
+        #text-block::first-letter {
+            font-size: 18pt;
+        }
+
+        
+        /* Изображение с обтеканием текста */
+        img {
+            float: left;
+            margin: 20px 0 20px 0;
+        }
+        /* Стиль для таблицы */
+        table {
+            width: 70%;
+            border-collapse: collapse;
+        }
+
+        table th {
+            text-align: center;
+        }
+
+        table td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        table td:first-child {
+            text-align: justify;
+        }
+
+        table td:nth-child(2) {
+            text-align: center;
+        }
+
+        table tr:nth-child(even) {
+            background-color: lightgray;
+        }
+
+        table tr:nth-child(odd) {
+            background-color: white;
+        }
+
+
+        /* Каскадное определение стиля */
+        h1 {
+            color: darkblue;
+        }
+
+        h1, h2 {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Стили для списков */
+        ul, ol {
+            margin-left: 20px;
+        }
+
+        ul ul, ol ol {
+            list-style-type: circle;
+        }
+
+        /* Стили для ссылок */
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        /* Применение CSS3 (например, тени и градиенты) */
+        h1 {
+            text-shadow: 2px 2px 5px gray;
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(to right, lightblue, blue);
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background: linear-gradient(to right, blue, lightblue);
+        }
+
+        /* Позиционирование элементов */
+        #username, #email {
+            position: relative;
+            left: 30px;
+        }
+
+        body {
+            background: linear-gradient(to right, lightblue, lightgreen); /* Создает градиент от светло-голубого к светло-зеленому */
+        }  
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Катонқарағай ауданы</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#section1">Тарау 1</a></li>
+            <li><a href="#section2">Тарау 2</a></li>
+        </ul>
+    </nav>
+
+    <div class="text-block">
+        <h2>Катонқарағай ауылы</h2>
+        <img src="C:\Users\Yerkhat\Downloads\katan.webp" alt="Катонқарағай" />
+    </div>
+
+    <section id="section1">
+        <h2>Тарау 1</h2>
+        <p id="text-block">Катонқарағай ауданы - <strong>Шығыс қазақстан облысының</strong> <em>шығысында орналасқан әкішілік бірлігі.</em>.</p>
+        <p>Аудан батысында <mark>Алтай, Үлкен Нарын </mark> оңтүстігінде Күршім ауданы, Марқакөл аудандарымен, солтүстігінде Ресей Федерациясымен, оңтүстік-шығысында Қытай Халық Республикасымен шектеседі.</p>
+        <p> 
+            <u>Халқы : 3096 адам</u>,
+            <s>Таулар жоқ</s>.
+        </p>
+   
+        
+        <ul>
+            <li>Тарихы
+                <ul>
+                    <li>1970 жылдың 4 желтоқсаны мен 1997 жылдың 23 наурызы аралығында ауыл Катонқарағай ауданының әкімшілік орталығы болып келді.</li>
+                    <li>1997 жылдың 23 наурызында Катонқарағай мен Үлкен Нарын аудандары біріккеннен кейін аудан орталығы болып Үлкен Нарын ауылы бекітілді.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <ol>
+            <li>Географиялық орны
+                <ol>
+                    <li>Облыс орталығы – Өскемен қаласынан оңтүстік-шығысқа қарай 360 км-дей жерде, Алтай тауларының, Сарымсақты жотасының баурайында орналасқан.</li>
+                    <li>Ресеймен шекаралас аймақ. Ауыл арқылы Үлкен-Нарын — Рахман қайнары автокөлік жолы</li>
+                </ol>
+            </li>
+        </ol>
+
+    <section id="section2">
+        <h2>Тарау 2</h2>
+
+
+    <h3>Форма</h3>
+    <form>
+        <label for="username">Аты жөніңіз:</label>
+        <input type="text" id="username" name="username" required placeholder="Введите ваше имя"><br><br>
+
+        <label for="email">Электронды почтаңыз:</label>
+        <input type="email" id="email" name="email" required placeholder="Введите вашу почту"><br><br>
+
+        <input type="submit" value="Отправить" class="button"> <!-- Используем класс .button -->
+    </form>
+
+    <h3>Кесте</h3>
+    <table border="1" cellpadding="10" cellspacing="0" width="80%">
+        <caption><strong>Резорт</strong></caption>
+        <thead>
+            <tr>
+                <th>Аты</th>
+                <th>Бағасы</th>
+                <th>Демалу күні</th>
+                <th>Тип нөмірі</th>
+                <th>Удобства</th>
+                <th>Рейтинг</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Резорт+</td>
+                <td rowspan="2">45000тг</td>
+                <td>10 күн</td>
+                <td rowspan="2">Люкс</td>
+                <td>Wi-Fi</td>
+                <td rowspan="2">4.8/5</td>
+            </tr>
+            <tr>
+                <td>20 күн</td>
+                <td>Бассейн, спа</td>
+            </tr>
+            <tr>
+                <td>Вип</td>
+                <td>70000тг</td>
+                <td>20 күн</td>
+                <td>Полулюкс</td>
+                <td>Wi-Fi, тренажерный зал</td>
+                <td>4.5/5</td>
+            </tr>
+            <tr>
+                <td>Простой</td>
+                <td>45000тг</td>
+                <td>7 күн</td>
+                <td>Стандарт</td>
+                <td>Wi-Fi</td>
+                <td>4.0/5</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <nav>
+        <ul>
+            <li><a href="https://kk.wikipedia.org/wiki/Катонқарағай">Алынған ақпарат</a></li>
+            <li><a href="https://2gis.kz/geo/70030076439794599">Орны</a></li>
+            <li><a href="index.html">Рахмоновские ключи</a></li>
+            <li><a href="https://kazkurort.kz/regions/katon-karagay/about/" target="_blank">Зоны отдыха</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>2024 Мой сайт</p>
+    </footer>
+
+   
+</body>
+</html>
